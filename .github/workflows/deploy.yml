@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
 
+    env:
+      TF_VAR_domain_name: ${{ secrets.DOMAIN_NAME }}
+      TF_VAR_certificate_arn: ${{ secrets.CERTIFICATE_ARN }}
+
     steps:
     - name: Checkout
       uses: actions/checkout@v2
