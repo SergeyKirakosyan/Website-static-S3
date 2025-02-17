@@ -76,6 +76,7 @@ resource "aws_cloudfront_distribution" "static_site" {
   }
 }
 
+/*
 resource "aws_route53_record" "static_site" {
   zone_id = data.aws_route53_zone.selected.zone_id
   name    = var.domain_name
@@ -87,6 +88,7 @@ resource "aws_route53_record" "static_site" {
     evaluate_target_health = false
   }
 }
+*/
 
 data "aws_route53_zone" "selected" {
   name = var.domain_name
